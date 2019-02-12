@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+<head>
+<title>Form</title>
+
+
+<script>
+
+
+function validate()
+
+
+{
+	
+
+var deg=document.getElementById("deg").value;
+	
+if(deg==""||deg==null)
+	{
+	
+	alert("Select a degree first");
+		
+	return false;
+	}
+	
+	var sid=document.getElementById("sid").value;
+	
+	if(sid==""||sid==null)
+
+	{
+		
+	alert("Please enter student ID");
+		
+	return false;
+
+	}
+	
+	var sub=document.getElementById("sub").value;
+	
+	if(sub==""||sub==null)
+
+		{
+		
+		alert("Select a class");
+		
+		return false;
+	}
+	
+	var fn=document.getElementById("fn").value;
+	
+if(fn==""||fn==null)
+	{
+		
+alert("Enter first name");
+		
+return false;
+	}
+	
+var ln=document.getElementById("ln").value;
+	
+if(ln==""||ln==null)
+	{
+		
+alert("Enter last name");
+		
+return false;
+	}
+	
+var g=document.getElementById("g").checked;
+	
+if(g==""||g==null)
+	{
+		
+alert("Select a gender");
+		
+return false;
+	}
+	
+var mail=document.getElementById("mail").value;
+
+
+	if(mail==""||mail==null)
+	{
+		
+alert("Enter email please");
+		
+return false;
+	}
+	
+var phn=document.getElementById("phn").value;
+	
+if(phn==""||phn==null)
+	{
+
+		alert("Please enter contact number");
+	
+	return false;
+	}
+	
+var c=document.getElementsByName("Radio");
+
+	var check = false;
+	
+for(var i=0; i<c.length; i++)
+	{
+		
+if(c[i].checked==true)
+			
+check=true;
+	}
+	
+
+if(check==false)
+	
+{
+		alert("Please choose your favourite colour");
+		
+		return false;
+
+	}
+	
+return true;
+
+}
+
+</script>
+
+</head>
+
+<body>
+<form action="thanku.html" onsubmit="return validate();">
+
+<fieldset>
+<legend>Academic information</legend>
+<table>
+<tr><td><label><b>Degree:-</b></label></td>
+<td><select name="select" id="deg">
+	<option value="Bachelor of Technology">Bachelor of Technology</option>
+	<option value="Master of Technology">Master of Technology</option>
+	<option value="Master of Business Administration">Master of Business Administration</option>
+	<option value="Bachelor of Science">Bachelor of Science</option>
+	<option value="Master of Science">Master of Science</option>
+</select></td>
+</tr>
+<tr><td><label><b>Student ID:-</b></label></td>
+<td><input type="number" name="number" placeholder="Enter ID" id="sid"></td></tr>
+<tr><td><label><b>Classes attended:-</b></label></td>
+<td><select name="select" size="3" id="sub">
+	<option value="Geography">Geography</option>
+	<option value="Mathematics">Mathematics</option>
+	<option value="English">English</option>
+</select></td>
+</table>
+</fieldset>
+<fieldset>
+<legend>Personal Details</legend>
+<table>
+<tr><td><label><b>First Name:-</b></label></td><td><input type="text" placeholder="First name" id="fn"></td></tr>
+<tr><td><label><b>Last Name:-</b></label></td><td><input type="text" placeholder="Last name" id="ln"></td></tr>
+<tr><td><label><b>Gender:-</b></label></td>
+<td><input type="radio" name="radiobutton" value="M" id="g"/>Male</td>
+<td><input type="radio" name="radiobutton" value="F" id="g"/>Female</td>
+<tr><td><label><b>Email:-</b></label></td><td><input type="text" placeholder="name123@gmail.com" id="mail"></td></tr>
+<tr><td><label><b>Contact:-</b></label></td><td><input type="number" placeholder="0123456789" id="phn"></td></tr>
+</table>
+</fieldset>
+<LABEL><textarea name="terms" cols="30" rows="4">TERMS AND CONDITIONS...</textarea></LABEL><br/>
+<fieldset>
+<legend>Choose your favourite color</legend>
+<table>
+<tr><td><input type="radio" name="Radio" value="R"/></td>
+<td>Red</td><td><input type="color" name="Red" value="#ff0000" id="c"/></td></tr>
+<tr><td><input type="radio" name="Radio" value="B"/></td>
+<td>Blue</td><td><input type="color" name="blue" value="#0000ff" id="c"/></td></tr>
+<tr><td><input type="radio" name="Radio" value="G"/></td>
+<td>Green</td><td><input type="color" name="green" value="#00ff00" id="c"/></td></tr>
+</table>
+<input type="submit" name="submit" value="Submit Form"/>
+<input type="reset" name="reset" value="Reset Form"/>
+</fieldset>
+</form>
+</body>
+</html>
